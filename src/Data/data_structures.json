@@ -1,0 +1,386 @@
+{
+	"Durable Goods Warehouse": {
+		"demand":{"eletric":100},
+		"provides":{"storage":5000,},
+		"buildable": true,
+		"category": "storage",
+		"comsumption": {
+			"water":10
+		},
+		"name": "Durable Goods Warehouse",
+		"position": null,
+		"production": {},
+		"requiriments": {
+			"steel": 1000
+		},
+		"size": {
+			"x": 16,
+			"y": 21
+		},
+		"texture": [
+			"res://src/Tileset/Structures/storage/durable_goods_warehouse_16x21.svg"
+		],
+		"tiles": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			31,
+			32,
+			33,
+			34,
+			35
+		],
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"Simple house": {
+		"demand":{"eletric":10},
+		"provides":{"worker":5},
+		"comsumption": {"water":20,"food":10},
+		"production": {"sewage":5},
+		"buildable": true,
+		"category": "housing",
+		"name": "Simple house",
+		"position": null,
+		
+		"requiriments": {
+			"money": 10,
+			"steel":20
+		},
+		"size": {
+			"x": 2,
+			"y": 2
+		},
+		"texture": [
+			"res://src/Tileset/Structures/housing/simple_house_2x2.svg"
+		],
+		"tiles": [
+			36,
+			37,
+			38
+		],
+		"time": 5,
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"Solar Panel": {
+		"provides":{"eletric":50},
+		"buildable": true,
+		"category": "Power",
+		"comsumption": null,
+		"name": "Solar Panel",
+		"position": null,
+		"requiriments": {
+			"steel": 100
+		},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"texture": [
+			"res://src/Tileset/Structures/power/solar_panel_1x1.svg"
+		],
+		"tiles": [
+			39
+		],
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"Vehicle Factory": {
+		"demand":{"eletric":100},
+		"buildable": true,
+		"category": "factory",
+		"comsumption": {"water":100},
+		"name": "Vehicle Factory",
+		"production": {
+			"vehicles":["miner","constructor"],
+			"CO2":10
+		},
+		"requiriments": {
+			"steel": 100
+		},
+		"size": {
+			"x": 9,
+			"y": 6
+		},
+		"texture": [
+			"res://src/Tileset/Structures/factory/vehicle_factory_9x6.svg"
+		],
+		"tiles": [
+			40,
+			41,
+			42,
+			43,
+			44,
+			45,
+			46,
+			47,
+			48,
+			49,
+			50,
+			51,
+			52,
+			53
+		],
+		"time": null,
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"constrction frame": {
+		"buildable": false,
+		"category": "constrction",
+		"comsumption": {},
+		"name": "constrction frame",
+		"production": {},
+		"requiriments": {},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"texture": [
+			"res://src/Tileset/Structures/construction/construction_frame_0.png",
+			"res://src/Tileset/Structures/construction/construction_frame_1.png"
+		],
+		"tiles": [
+			54,
+			55
+		],
+		"time": null,
+		"to_tileset": true,
+		"type": null
+	},
+	"ground": {
+		"buildable": false,
+		"destructible": false,
+		"level": "N/A",
+		"name": "ground",
+		"navegable": true,
+		"position": null,
+		"requiriments": {},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"speed_factor": 0.6,
+		"texture": [
+			"res://src/Tileset/Structures/terrain/terrain_ground.svg"
+		],
+		"tiles": [
+			56
+		],
+		"to_tileset": true,
+		"type": "terrain"
+	},
+	"lake": {
+		"buildable": false,
+		"category": "deposit",
+		"comsumption": null,
+		"name": "lake",
+		"position": null,
+		"production": {
+			"water": 10000
+		},
+		"requiriments": {},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"texture": [
+			"res://src/Tileset/Structures/natural deposit/lake/lake.svg"
+		],
+		"tiles": [
+			57
+		],
+		"to_tileset": true,
+		"type": "deposit"
+	},
+	"name_exemple": {
+		"provides":{},
+		"buildable": null,
+		"category": null,
+		"comsumption": {},
+		"name": null,
+		"production": {},
+		"requiriments": {},
+		"size": {
+			"x": null,
+			"y": null
+		},
+		"texture": [
+			""
+		],
+		"tiles": [],
+		"time": null,
+		"to_tileset": null,
+		"type": null
+	},
+	"Nuclear Plant": {
+		"demand":null,
+		"provides":{"eletric":5000},
+		"buildable": true,
+		"category": "power",
+		"comsumption": {
+			"uranium": 10
+		},
+		"name": "Nuclear Plant",
+		"position": null,
+		"production": {
+			"nuclear waste": 10
+		},
+		"requiriments": {
+			"uranium": 1000,
+			"brick": 1000,
+			"iron": 1000,
+			"steel": 1000
+		},
+		"size": {
+			"x": 8,
+			"y": 9
+		},
+		"texture": [
+			"res://src/Tileset/Structures/power/nuclear_plant_8x9.svg"
+		],
+		"tiles": [
+			58,
+			59,
+			60,
+			61,
+			62,
+			63,
+			64,
+			65,
+			66,
+			67,
+			68,
+			69,
+			70,
+			71,
+			72,
+			73
+		],
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"Plastic Factory": {
+		"demand":{"eletric":10},
+		"buildable": true,
+		"category": "factory",
+		"comsumption": {
+			"oil": 100,
+			"steel": 1000
+		},
+		"name": "Plastic Factory",
+		"production": {
+			"plastic": 100
+		},
+		"requiriments": {
+			"steel": 1000
+		},
+		"size": {
+			"x": 8,
+			"y": 5
+		},
+		"texture": [
+			"res://src/Tileset/Structures/factory/plastic_factory_8x5.svg"
+		],
+		"tiles": [
+			74,
+			75,
+			76,
+			77,
+			78,
+			79,
+			80,
+			81,
+			82,
+			83,
+			84,
+			85
+		],
+		"time": 5,
+		"to_tileset": true,
+		"type": "structure"
+	},
+	"road_lv1": {
+		"buildable": true,
+		"destructible": true,
+		"level": 1,
+		"name": "Road level 1",
+		"navegable": true,
+		"position": null,
+		"requiriments": {},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"speed_factor": 1,
+		"texture": [
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_0.svg",
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_1.svg",
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_2.svg",
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_3.svg",
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_4.svg",
+			"res://src/Tileset/Structures/terrain/road_lv1/road_lv1_5.svg"
+		],
+		"tiles": [],
+		"to_tileset": false,
+		"type": "terrain"
+	},
+	"tree": {
+		"buildable": true,
+		"category": "deposit",
+		"name": "tree",
+		"position": null,
+		"requiriments": {
+			"water": 100
+		},
+		"deposit":{"wood":100,"latex":20},
+		"size": {
+			"x": 1,
+			"y": 1
+		},
+		"texture": [
+			"res://src/Tileset/Structures/natural deposit/tree/tree_0.svg",
+			"res://src/Tileset/Structures/natural deposit/tree/tree_1.svg",
+			"res://src/Tileset/Structures/natural deposit/tree/tree_2.svg",
+			"res://src/Tileset/Structures/natural deposit/tree/tree_3.svg"
+		],
+		"tiles": [
+			86,
+			87,
+			88,
+			89
+		],
+		"to_tileset": true,
+		"type": "deposit",
+		"unit": "wd"
+	}
+}

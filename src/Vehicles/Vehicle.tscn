@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Vehicles/Miner/backhoe-front-01.svg" type="Texture" id=2]
+[ext_resource path="res://src/Tileset/Structures/terrain/terrain_ground.svg" type="Texture" id=3]
+[ext_resource path="res://src/Vehicles/Vehicle.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.56111, 1.49551 )
+
+[node name="Vehicle" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="terrain_ground" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.54893
+shape = SubResource( 1 )

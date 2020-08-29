@@ -1,0 +1,10 @@
+{
+	"miner":{
+		"name":"miner",
+		"texture":"res://src/Vehicles/Miner/backhoe-front-01.svg"
+	},
+	"constructor":{
+		"name":"constructor",
+		"texture":"res://src/Vehicles/Constructor/concrete-truck-front-01.svg"
+	}
+}

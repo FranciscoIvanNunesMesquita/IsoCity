@@ -1,0 +1,58 @@
+{
+	"eletric": {
+		"category": "demand",
+		"id": null,
+		"name": "eletric",
+		"texture": "res://src/UI/Icons/resource/eletric.png",
+		"unit": "el",
+		"value": null,
+		"demand_value":0,
+		
+	},
+	"worker": {
+		"category": "demand",
+		"id": null,
+		"name": "worker",
+		"texture": "res://src/UI/Icons/resource/worker.png",
+		"unit": "el",
+		"value": null,
+		"demand_value":0,
+		
+	},
+	"food": {
+		"id": null,
+		"name": "food",
+		"texture": "res://src/UI/Icons/resource/food.png",
+		"value": 500,
+		"storage":500
+	},
+	"money": {
+		"id": null,
+		"name": "money",
+		"texture": "res://src/UI/Icons/resource/money.png",
+		"value": 2000,
+		
+	},
+	"steel": {
+		"category": "resource",
+		"id": null,
+		"name": "steel",
+		"texture": "res://src/UI/Icons/resource/steel.png",
+		"unit": "st",
+		"value": 10000,
+		"storage":10000 
+	},
+	"uranium": {
+		"id": null,
+		"name": "uranium",
+		"texture": "res://src/UI/Icons/resource/nuclear.png",
+		"value": null,
+		"storage":1000.0
+	},
+	"water": {
+		"name": "water",
+		"texture": "res://src/UI/Icons/resource/water.png",
+		"value": 100,
+		"storage":3000.0
+	}
+}

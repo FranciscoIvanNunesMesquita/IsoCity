@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/World/Selector.gd" type="Script" id=1]
+[ext_resource path="res://src/Tileset/Structures/storage/durable_goods_warehouse_16x21.svg" type="Texture" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform vec4 current_color: hint_color;
+void fragment()
+{
+	vec4 final = mix(texture(TEXTURE,UV),current_color,texture(TEXTURE,UV).a);
+	COLOR = final;
+}"
+custom_defines = ""
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/current_color = null
+
+[node name="Selector" type="Node2D"]
+z_index = 4
+script = ExtResource( 1 )
+yellow = Color( 0.921569, 1, 0, 0.427451 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 2.24493, 2.24493 )
+texture = ExtResource( 2 )

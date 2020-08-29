@@ -1,0 +1,343 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/UI/UI.gd" type="Script" id=1]
+[ext_resource path="res://src/UI/Icons/build_button_icon.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/ResourceList.gd" type="Script" id=3]
+[ext_resource path="res://src/UI/BuildingsList.gd" type="Script" id=4]
+[ext_resource path="res://src/UI/BuildButton.gd" type="Script" id=5]
+[ext_resource path="res://src/UI/CenterUIContainer.gd" type="Script" id=6]
+[ext_resource path="res://src/UI/Theme/theme.tres" type="Theme" id=7]
+[ext_resource path="res://src/UI/arrow.png" type="Texture" id=8]
+[ext_resource path="res://src/UI/arrow_0.png" type="Texture" id=9]
+[ext_resource path="res://src/UI/menu_background.png" type="Texture" id=10]
+[ext_resource path="res://src/UI/bulldozer.png" type="Texture" id=11]
+[ext_resource path="res://src/UI/research_icon.png" type="Texture" id=12]
+[ext_resource path="res://src/UI/trend.png" type="Texture" id=13]
+[ext_resource path="res://src/UI/gear.png" type="Texture" id=14]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="InteractMenuContainer" type="MarginContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -90.5
+margin_top = -40.0
+margin_right = 90.5
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="InteractMenuContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 177.0
+margin_bottom = 36.0
+texture = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InteractMenuContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 177.0
+margin_bottom = 36.0
+alignment = 1
+
+[node name="Text" type="Label" parent="InteractMenuContainer/VBoxContainer"]
+margin_top = 9.0
+margin_right = 173.0
+margin_bottom = 23.0
+text = "name"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InteractMenuContainer/VBoxContainer"]
+visible = false
+margin_top = 18.0
+margin_right = 173.0
+margin_bottom = 32.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+alignment = 1
+
+[node name="Interact" type="Button" parent="InteractMenuContainer/VBoxContainer/HBoxContainer"]
+margin_left = 18.0
+margin_right = 68.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Interact"
+
+[node name="Interact2" type="Button" parent="InteractMenuContainer/VBoxContainer/HBoxContainer"]
+margin_left = 72.0
+margin_right = 103.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "stats"
+
+[node name="Interact3" type="Button" parent="InteractMenuContainer/VBoxContainer/HBoxContainer"]
+margin_left = 107.0
+margin_right = 155.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "destroy"
+
+[node name="BuildButtonContainer" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -50.0
+margin_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 50, 50 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuildButton" type="Button" parent="BuildButtonContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource( 2 )
+expand_icon = true
+script = ExtResource( 5 )
+
+[node name="ResourceListContainer" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_bottom = 9.0
+grow_horizontal = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme = ExtResource( 7 )
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourceList" type="ItemList" parent="ResourceListContainer"]
+margin_top = 4.0
+margin_bottom = 13.0
+grow_horizontal = 0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_height = true
+fixed_icon_size = Vector2( 20, 20 )
+script = ExtResource( 3 )
+yellow = Color( 1, 0.937255, 0, 1 )
+red = Color( 1, 0, 0, 1 )
+
+[node name="BuildingsListContainer2" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = -104.0
+margin_right = 104.0
+margin_bottom = 104.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme = ExtResource( 7 )
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuildingsList" type="ItemList" parent="BuildingsListContainer2"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 204.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 200, 200 )
+focus_mode = 1
+size_flags_horizontal = 7
+size_flags_vertical = 7
+items = [ "Item 0", null, false, "Item 1", null, false, "Item 2", null, false, "Item 3", null, false, "Item 4", null, false, "Item 5", null, false, "Item 6", null, false, "Item 7", null, false, "Item 8", null, false ]
+allow_reselect = true
+fixed_icon_size = Vector2( 50, 50 )
+script = ExtResource( 4 )
+
+[node name="ArrowTop" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 25.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ArrowTop"]
+margin_right = 40.0
+margin_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 9 )
+stretch_mode = 4
+flip_v = true
+
+[node name="ArrowRight" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.0
+margin_bottom = 20.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ArrowRight"]
+margin_right = 25.0
+margin_bottom = 40.0
+size_flags_horizontal = 12
+size_flags_vertical = 4
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="ArrowLeft" type="MarginContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -40.0
+margin_right = 25.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ArrowLeft"]
+margin_right = 25.0
+margin_bottom = 40.0
+size_flags_horizontal = 12
+size_flags_vertical = 4
+texture = ExtResource( 8 )
+stretch_mode = 4
+flip_h = true
+
+[node name="ArrowBottom" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -25.0
+margin_right = 20.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ArrowBottom"]
+margin_right = 40.0
+margin_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Options" type="MarginContainer" parent="."]
+margin_right = 48.0
+margin_bottom = 168.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 48.0
+margin_bottom = 168.0
+
+[node name="SettingsButton" type="Button" parent="Options/VBoxContainer"]
+margin_right = 44.0
+margin_bottom = 38.0
+icon = ExtResource( 14 )
+
+[node name="ResearchButton" type="Button" parent="Options/VBoxContainer"]
+margin_top = 42.0
+margin_right = 44.0
+margin_bottom = 80.0
+icon = ExtResource( 12 )
+
+[node name="StatsButton" type="Button" parent="Options/VBoxContainer"]
+margin_top = 84.0
+margin_right = 44.0
+margin_bottom = 122.0
+icon = ExtResource( 13 )
+
+[node name="DemolitionButton" type="Button" parent="Options/VBoxContainer"]
+margin_top = 126.0
+margin_right = 44.0
+margin_bottom = 164.0
+icon = ExtResource( 11 )
+[connection signal="state_changed" from="." to="BuildButtonContainer/BuildButton" method="_on_UI_state_changed"]
+[connection signal="state_changed" from="." to="." method="_on_UI_state_changed"]
+[connection signal="mouse_entered" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact" to="." method="mouse_out_UI"]
+[connection signal="mouse_entered" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact2" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact2" to="." method="mouse_out_UI"]
+[connection signal="mouse_entered" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact3" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="InteractMenuContainer/VBoxContainer/HBoxContainer/Interact3" to="." method="mouse_out_UI"]
+[connection signal="button_down" from="BuildButtonContainer/BuildButton" to="." method="_on_BuildButton_button_down"]
+[connection signal="mouse_entered" from="BuildButtonContainer/BuildButton" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="BuildButtonContainer/BuildButton" to="." method="mouse_out_UI"]
+[connection signal="mouse_entered" from="ResourceListContainer/ResourceList" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="ResourceListContainer/ResourceList" to="." method="mouse_out_UI"]
+[connection signal="item_selected" from="BuildingsListContainer2/BuildingsList" to="." method="_on_BuildingsList_item_selected"]
+[connection signal="mouse_entered" from="BuildingsListContainer2/BuildingsList" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="BuildingsListContainer2/BuildingsList" to="." method="mouse_out_UI"]
+[connection signal="visibility_changed" from="BuildingsListContainer2/BuildingsList" to="BuildButtonContainer/BuildButton" method="_on_BuildingsList_visibility_changed"]
+[connection signal="mouse_entered" from="ArrowTop" to="." method="_mouse_on_arrows" binds= [ "top" ]]
+[connection signal="mouse_exited" from="ArrowTop" to="." method="_mouse_out_arrows"]
+[connection signal="mouse_entered" from="ArrowRight" to="." method="_mouse_on_arrows" binds= [ "right" ]]
+[connection signal="mouse_exited" from="ArrowRight" to="." method="_mouse_out_arrows"]
+[connection signal="mouse_entered" from="ArrowLeft" to="." method="_mouse_on_arrows" binds= [ "left" ]]
+[connection signal="mouse_exited" from="ArrowLeft" to="." method="_mouse_out_arrows"]
+[connection signal="mouse_entered" from="ArrowBottom" to="." method="_mouse_on_arrows" binds= [ "bottom" ]]
+[connection signal="mouse_exited" from="ArrowBottom" to="." method="_mouse_out_arrows"]
+[connection signal="mouse_entered" from="Options/VBoxContainer/SettingsButton" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="Options/VBoxContainer/SettingsButton" to="." method="mouse_out_UI"]
+[connection signal="mouse_entered" from="Options/VBoxContainer/ResearchButton" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="Options/VBoxContainer/ResearchButton" to="." method="mouse_out_UI"]
+[connection signal="mouse_entered" from="Options/VBoxContainer/StatsButton" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="Options/VBoxContainer/StatsButton" to="." method="mouse_out_UI"]
+[connection signal="button_down" from="Options/VBoxContainer/DemolitionButton" to="." method="_on_DemolitionButton_button_down"]
+[connection signal="mouse_entered" from="Options/VBoxContainer/DemolitionButton" to="." method="mouse_in_UI"]
+[connection signal="mouse_exited" from="Options/VBoxContainer/DemolitionButton" to="." method="mouse_out_UI"]
