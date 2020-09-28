@@ -1,6 +1,5 @@
 # IsoCity
-Um <i>City Builder<i> inspirado em simcity mas baseado em coleta de recursos naturais para evolução da sua cidade
-
+Um <i>City Builder<i> inspirado em simcity e myColony, é um jogo baseado em coleta de recursos naturais para evolução da sua cidade
 <b>Screenshots<b>
 <img src="https://github.com/FranciscoIvanNunesMesquita/IsoCity/blob/master/screenshots/Anota%C3%A7%C3%A3o%202020-09-06%20133304.png">
 <img src="https://github.com/FranciscoIvanNunesMesquita/IsoCity/blob/master/screenshots/Anota%C3%A7%C3%A3o%202020-09-06%20133504.png">
